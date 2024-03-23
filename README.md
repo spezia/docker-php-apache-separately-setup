@@ -4,7 +4,7 @@ Set up Apache and PHP Docker images to work together
 Many people encounter issue when trying to set up Apache and PHP as two separate Docker images. This will be a short example demonstrating how to connect a PHP image to an Apache HTTP Server (httpd) image and successfully open a PHP file in a web browser.
 
 For this example, I will pull two Docker images: [php:7.3.0-fpm-alpine](https://hub.docker.com/_/php) and [httpd:2.4.58-alpine](https://hub.docker.com/_/httpd).
-Apache will store project files in *** /usr/local/apache2/htdocs/ ***.
+Apache will store project files in ***/usr/local/apache2/htdocs***.
 The Apache HTTP Server (httpd) configuration will look like this:
 
 ```
