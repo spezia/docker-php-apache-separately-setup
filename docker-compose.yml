@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  server:
+    image: httpd:2.4.58-alpine 
+    volumes:
+      - ./my-httpd.conf:/usr/local/apache2/conf/httpd.conf
+    ports:
+      - 8000:80
+    depends_on:
+      - myphp 
+
+  myphp:
+    image: php:7.3.0-fpm-alpine
+    ports:
+      - 9000:9000
+    volumes:
+      - ./src:/var/www/html
+
